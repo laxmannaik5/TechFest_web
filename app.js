@@ -2,6 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const days = require(__dirname + "/days.js");
+const hours = require(__dirname + "/hours.js");
+const minutes = require(__dirname + "/minutes.js");
+const seconds = require(__dirname + "/seconds.js");
 
 
 const app = express();
@@ -9,6 +13,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+
 
 
 
@@ -29,7 +34,7 @@ const Cred = new mongoose.model("Cred", credSchema);
 
 
 app.get("/", function(req, res){
-  res.render("home");
+  res.render("home", {days: days(), hours: hours(), minutes: minutes(), seconds: seconds()});
 });
 app.get("/login", function(req, res){
   res.render("login");

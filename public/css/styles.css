@@ -1,12 +1,64 @@
-html, body {
-  height: 100%;
-}
-.parent {
+body {
   background-image: url("industry_4.0.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   height: 100%;
 }
-.image {
-  border-radius: 100%;
+.copyright {
+  color: #ce1212;
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+}
+.button {
+  position: fixed;
+  bottom: 50px;
+  width:100%;
+  text-align: center;
+}
+.card-body {
+  background-color: #d8e3e7;
+}
+.parent-container {
+  background-color: yellow;
+}
+.container {
+  color: #bb371a;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 0.2em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+
+@media all and (max-width: 768px) {
+
+  li {
+    font-size: 1.125rem;
+    padding: .75rem;
+  }
+
+  li span {
+    font-size: 3.375rem;
+  }
 }
